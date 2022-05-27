@@ -25,6 +25,14 @@ ClassMethod Hello() As %Status
   Return sc
 }
 
+ClassMethod Test() As %Status
+{
+  Set sc = $$$OK
+  Set sm = ##class(%SYS.Python).Import("irisfhirclient")
+  write sm.hello()
+  Return sc
+}
+
 /// Titanic
 ClassMethod TitanicMeanAge() As %Status
 {

@@ -7,9 +7,11 @@
       <Description>The simplest template to run embedded python</Description>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
-      <Resource Name="dc.python.PKG"/>
-      <FileCopy Name="python/" Target="${mgrdir}python/"/>
-      <FileCopy Name="data/" Target="${mgrdir}data/"/>
+      <Resource Name="dc.PKG"/>
+      <FileCopy Name="python/" Target="${mgrdir}python/"/>   
+      
+      <Invoke Class="dc.FhirClient" Method="Init"></Invoke>
+      
     </Module>
   </Document>
 </Export>
